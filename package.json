@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "devDependencies": {
+    "asyncjs": "0.0.x",
+    "jsdom": "9.3.0",
+    "amd-loader": "~0.0.4",
+    "dryice": "0.4.11",
+    "architect-build": "https://github.com/c9/architect-build/tarball/17268dce65"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+
+    "body-parser": "~1.15.1",
+
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "jade": "~1.11.0",
+    "machinepack-hackerrank": "^0.1.2",
+    "morgan": "~1.7.0",
+    "node-hackerrank": "^1.0.6",
+    "request": "*",
+    "request-promise": "*",
+"serve-favicon":"*"
+
+  }
+}

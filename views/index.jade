@@ -1,0 +1,49 @@
+doctype html(lang='en')
+head
+		title Question Editor
+		link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(href='/stylesheets/style.css' rel='stylesheet')
+		link(rel='stylesheet', href='/fonts/font-awesome/css/font-awesome.min.css')
+		style(type='text/css', media='screen').
+			#editor {
+			height:100%;
+			}
+	body(style="overflow:hidden")
+		#editor.col-md-8
+		
+		#result.col-md-4
+			.form-group
+				label
+				select.form-control.languageSelector#languageSelector(onchange="changeLanguage()" name="lang" required)
+					option(value="1" selected=(language=="1") ) C 
+					option(value="2" selected=(language=="2") ) C++ 
+					option(value="9" selected=(language=="9")) C# 
+					option(value="3"  selected=(language=="3")) Java
+					option(value="20"  selected=(language=="20")) Javascript 
+					option(value="5" selected=(language=="5") ) Python 
+			#compile
+				#compileResponse
+					textarea.customInput(placeholder="Provide your input here each seperated by a new line.")
+				#compileButton
+					button.compileButton() COMPILE & RUN
+
+			#run
+				#runResponse 
+				#submitButton
+					button.submitButton(disabled) YOUR OUTPUT
+			#submit
+
+		
+
+		script(src='/src-noconflict/ace.js', type='text/javascript', charset='utf-8')
+		script.
+			var editor = ace.edit("editor");
+			editor.setTheme("ace/theme/monokai");
+			editor.setFontSize(16);
+			editor.getSession().setMode("ace/mode/#{langCode}");
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+		|     
+		script(src='/javascripts/bootstrap.min.js')
+		script(src="/javascripts/jquery.js")
+		script(src="/javascripts/compile.js")
