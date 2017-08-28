@@ -6,6 +6,6 @@ It runs on Node Server with Express.
 Inorder to set it up get your self registered on Hackerrank and signup for an API KEY.
 Set up yor API KEY in the server.
 
-Live demo can be seen on https://codecompilerrun.herokuapp.com
+Live demo can be seen on https://codecompilerun.herokuapp.com
 
 
